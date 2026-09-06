@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Form</title>
+    <title>Eagle Store - Order Form</title>
     <style>
         body {
             background-color: #0b0b0b;
@@ -14,7 +14,24 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
         }
+        
+        /* Top Right Logo Styling */
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logo-container img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
         .container {
             background: #141414;
             border: 2px solid #d4af37;
@@ -87,8 +104,12 @@
 </head>
 <body>
 
+    <div class="logo-container">
+        <img src="Eagle_Store.png" alt="Eagle Store Logo">
+    </div>
+
     <div class="container">
-        <h2>Client Order Form</h2>
+        <h2>Eagle Store Order</h2>
         <form id="orderForm">
             <div class="form-group">
                 <label for="discordName">Discord name :</label>
@@ -121,7 +142,7 @@
             statusDiv.textContent = '';
 
             const payload = {
-                content: `🛒 **New Purchase Submission**\n> **Discord Name:** ${discordName}\n> **What they bought:** ${clientBuy}`
+                content: `🦅 **Eagle Store - New Order**\n> **Discord Name:** ${discordName}\n> **What they bought:** ${clientBuy}`
             };
 
             try {
